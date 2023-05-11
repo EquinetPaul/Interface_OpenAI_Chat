@@ -24,5 +24,5 @@ python web.py
 ```
 
 ---
-
+## Screenshot
 ![plot_chat](https://raw.githubusercontent.com/EquinetPaul/EquinetPaul/main/img_chat.png)
