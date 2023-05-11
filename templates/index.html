@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='prism.css') }}">
+  </head>
+  <body>
+
+    <div class="container">
+      <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        </ul>
+      </header>
+    </div>
+
+    <hr class="hr" />
+
+    <form action="{{ url_for('submit') }}" method="post">
+    <input id="token" name="token" placeholder="OpenAI Key" type="password" class="form-control" value="{{ token }}"></textarea>
+
+    <hr class="hr" />
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" class="form-control">{{ input }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br> <br>
+
+    <div class="container bg-light p-3 rounded" >
+      <div class="row">
+        <div class="col">
+          <!-- <pre><code class="language-python">{{ response }}</code></pre> -->
+          <pre>{{ response }}</pre>
+        </div>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
+
+<script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='prism.js') }}"></script>
